@@ -31,25 +31,15 @@ async function createUser(email: string, name: string, password: string) {
     return newUser;
 }
 
-const handler = async (req: NextApiRequest, res: NextApiResponse) => {
-    if (req.method === 'GET') {
-        try {
-            const users = await prisma.user.findMany();
-            res.status(200).json(users);
-        } catch (error) {
-            res.status(500).json({ error: 'Error fetching users' });
-        }
-    } else if (req.method === 'POST') {
-        const { name, email, password } = req.body as UserRequestBody;
-        try {
-            const newUser = await createUser(email, name, password);
-            res.status(201).json(newUser);
-        } catch (error: any) {
-            res.status(500).json({ error: error.message});
-        }
-    } else {
-        res.status(405).end(); // Method Not Allowed
+// Hanterare för att skapa en användare
+const registerHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+    const { name, email, password } = req.body as UserRequestBody;
+    try {
+        const newUser = await createUser(email, name, password);
+        res.status(201).json(newUser);
+    } catch (error: any) {
+        res.status(500).json({ error: error.message});
     }
 };
 
-export default handler;
+export default registerHandler;
