@@ -16,3 +16,4 @@ export default async function getUsers(req: NextApiRequest, res: NextApiResponse
         res.status(405).json({ error: 'Vi stöder endast GET-förfrågningar' });
     }
 }
+
