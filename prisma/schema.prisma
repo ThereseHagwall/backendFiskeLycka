@@ -14,7 +14,7 @@ datasource db {
 }
 
 model Post {
-  id        Int      @id @default(autoincrement())
+  id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   title     String
   content   String?
