@@ -30,4 +30,5 @@ model User {
   name     String?
   password String
   posts    Post[]
+  admin    Boolean @default(false)
 }
