@@ -22,7 +22,7 @@ async function loginUser(email: string, password: string) {
         throw new Error('Invalid credentials');
     }
 
-    return { success: true, userId: user.id };
+    return { success: true, userId: user.id, Email: user.email, Admin: user.admin };
 }
 
 // Hanterare för att logga in en användare
@@ -30,6 +30,7 @@ const loginHandler = async (req: NextApiRequest, res: NextApiResponse) => {
     const { email, password } = req.body as UserRequestBody;
     try {
         const loginResult = await loginUser(email, password);
+
         res.status(200).json(loginResult);
     } catch (error: any) {
         res.status(401).json({ error: error.message });
