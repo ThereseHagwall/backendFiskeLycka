@@ -13,12 +13,12 @@ async function updateUserName(userId: string, newName: string) {
 }
 
 // API endpoint for updating name
-export const updateNameHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function updateNameHandler(req: NextApiRequest, res: NextApiResponse) {
     const { userId, newName } = req.body;
     try {
-        const user = await updateUserName(userId, newName);
-        res.status(200).json(user);
+        await updateUserName(userId, newName);
+        res.status(200).json({ message: 'Användarnamnet uppdaterades' });
     } catch (error: any) {
         res.status(500).json({ error: error.message });
     }
-};
+}

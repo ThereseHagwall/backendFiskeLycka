@@ -23,12 +23,12 @@ async function updateUserPassword(userId: string, newPassword: string) {
 }
 
 // API endpoint for updating password
-export const updatePasswordHandler = async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function updatePasswordHandler(req: NextApiRequest, res: NextApiResponse) {
     const { userId, newPassword } = req.body;
     try {
-        const user = await updateUserPassword(userId, newPassword);
-        res.status(200).json(user);
+        await updateUserPassword(userId, newPassword);
+        res.status(200).json({ message: 'Password updated' });
     } catch (error: any) {
         res.status(500).json({ error: error.message });
     }
-};
+}
