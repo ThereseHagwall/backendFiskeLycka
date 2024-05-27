@@ -29,6 +29,6 @@ model User {
   email    String  @unique
   name     String?
   password String
-  posts    Post[]
   admin    Boolean @default(false)
+  posts    Post[]
 }
