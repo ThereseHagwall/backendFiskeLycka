@@ -22,7 +22,7 @@ async function loginUser(email: string, password: string) {
         throw new Error('Invalid credentials');
     }
 
-    return { success: true, userId: user.id, Email: user.email, Admin: user.admin };
+    return { success: true, userId: user.id, email: user.email, admin: user.admin };
 }
 
 // Hanterare för att logga in en användare
