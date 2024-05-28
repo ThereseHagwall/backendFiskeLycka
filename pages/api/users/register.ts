@@ -26,6 +26,10 @@ async function createUser(email: string, name: string, password: string) {
         throw new Error('Lösenordet måste innehålla minst en siffra.');
     }
 
+    if (!/\d/.test(password) || password.length < 8) {
+        throw new Error('Lösenordet måste innehålla minst en siffra och vara minst 8 tecken långt.');
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = await prisma.user.create({
         data: {
