@@ -27,8 +27,8 @@ model CatchReport {
   notes     String?
   authorId  String
   Author    User     @relation(fields: [authorId], references: [id])
-  Post      Post     @relation(fields: [postId], references: [id])
-  postId    String
+  Post      Post?     @relation(fields: [postId], references: [id])
+  postId    String?
 }
 
 model Post {
