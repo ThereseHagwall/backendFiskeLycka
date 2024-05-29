@@ -18,13 +18,14 @@ model CatchReport {
   date      DateTime @default(now())
   location  String
   species   String
-  weight    Float
-  length    Float
+  weight    Float?
+  length    Float?
   bait      String
   method    String
   weather   String
-  waterTemp Float
+  waterTemp Float?
   notes     String?
+  image     Bytes?
   authorId  String
   Author    User     @relation(fields: [authorId], references: [id])
   Post      Post?    @relation(fields: [postId], references: [id])
