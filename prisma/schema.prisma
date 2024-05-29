@@ -13,15 +13,34 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
+model CatchReport {
   id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  title     String
-  content   String?
-  image     Bytes?
-  published Boolean  @default(false)
-  author    User     @relation(fields: [authorId], references: [id])
+  date      DateTime @default(now())
+  location  String
+  species   String
+  weight    Float
+  length    Float
+  bait      String
+  method    String
+  weather   String
+  waterTemp Float
+  notes     String?
   authorId  String
+  Author    User     @relation(fields: [authorId], references: [id])
+  Post      Post     @relation(fields: [postId], references: [id])
+  postId    String
+}
+
+model Post {
+  id        String       @id @default(uuid())
+  createdAt DateTime     @default(now())
+  title     String
+  content   String
+  image     Bytes?
+  published Boolean      @default(false)
+  author    User         @relation(fields: [authorId], references: [id])
+  authorId  String
+  reports   CatchReport[]
 }
 
 model User {
@@ -31,4 +50,6 @@ model User {
   password String
   admin    Boolean @default(false)
   posts    Post[]
+  reports  CatchReport[]
 }
+
