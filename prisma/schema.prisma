@@ -27,29 +27,28 @@ model CatchReport {
   notes     String?
   authorId  String
   Author    User     @relation(fields: [authorId], references: [id])
-  Post      Post?     @relation(fields: [postId], references: [id])
+  Post      Post?    @relation(fields: [postId], references: [id])
   postId    String?
 }
 
 model Post {
-  id        String       @id @default(uuid())
-  createdAt DateTime     @default(now())
+  id        String        @id @default(uuid())
+  createdAt DateTime      @default(now())
   title     String
   content   String
   image     Bytes?
-  published Boolean      @default(false)
-  author    User         @relation(fields: [authorId], references: [id])
+  published Boolean       @default(false)
+  author    User          @relation(fields: [authorId], references: [id])
   authorId  String
   reports   CatchReport[]
 }
 
 model User {
-  id       String  @id @default(uuid())
-  email    String  @unique
+  id       String        @id @default(uuid())
+  email    String        @unique
   name     String?
   password String
-  admin    Boolean @default(false)
+  admin    Boolean       @default(false)
   posts    Post[]
   reports  CatchReport[]
 }
-
