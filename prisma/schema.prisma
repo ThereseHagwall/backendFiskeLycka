@@ -27,7 +27,7 @@ model CatchReport {
   notes     String?
   image     Bytes?
   authorId  String
-  Author    User     @relation(fields: [authorId], references: [id])
+  author    User     @relation(fields: [authorId], references: [id])
   Post      Post?    @relation(fields: [postId], references: [id])
   postId    String?
 }
