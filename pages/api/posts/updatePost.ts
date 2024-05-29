@@ -10,8 +10,8 @@ export default async function updatePostHandler(req: NextApiRequest, res: NextAp
 
   const { postId, newTitle, newContent, newImage } = req.body;
   const updateData: Record<string, any> = {};
-  if (newTitle) updateData.location = newTitle;
-  if (newContent) updateData.species = newContent;
+  if (newTitle) updateData.title = newTitle;
+  if (newContent) updateData.content = newContent;
   if (newImage) updateData.image = newImage;
 
   try {
