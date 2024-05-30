@@ -6,7 +6,7 @@ const prisma = new PrismaClient();
 export default async function getposts(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === 'GET') {
         try {
-            const users = await prisma.catchReport.findMany({
+            const catchReport = await prisma.catchReport.findMany({
                 select: {
                     id: true,
                     date: true,
@@ -28,7 +28,8 @@ export default async function getposts(req: NextApiRequest, res: NextApiResponse
                     },
                 },
             });
-            res.status(200).json(users);
+            console.log(catchReport);
+            res.status(200).json(catchReport);
         } catch (error: any) {
             res.status(500).json({ error: error.message });
         }
