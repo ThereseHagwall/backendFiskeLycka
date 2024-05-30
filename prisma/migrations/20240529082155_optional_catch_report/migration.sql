@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "CatchReport" ADD COLUMN     "image" BYTEA,
+ALTER COLUMN "weight" DROP NOT NULL,
+ALTER COLUMN "length" DROP NOT NULL,
+ALTER COLUMN "waterTemp" DROP NOT NULL;
