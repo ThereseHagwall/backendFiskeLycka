@@ -2,6 +2,16 @@
 
 This is the backend repository for [FiskeLycka](https://github.com/AnnebladFelix/FiskeLycka), a mobile app for fishing enthusiasts. The backend is written with Next.js and hosted on Netlify.
 
+## Getting Started
+
+To clone this repository, follow these steps:
+
+1. Open your terminal.
+2. Navigate to the directory where you want to clone the repository.
+3. Run the following command:
+
+git clone <repository-url>
+
 ## Project Structure
 
 The project follows a clear and organized structure:
