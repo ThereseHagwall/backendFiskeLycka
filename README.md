@@ -16,7 +16,3 @@ The project follows a clear and organized structure:
 ## Contributing
 
 We welcome contributions from everyone! If you have suggestions for improvements or want to report an issue, feel free to create an issue or pull request.
-
-## License
-
-This project is licensed under the MIT license.
