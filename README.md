@@ -10,7 +10,7 @@ To clone this repository, follow these steps:
 2. Navigate to the directory where you want to clone the repository.
 3. Run the following command:
 
-git clone <repository-url>
+git clone [<repository-url>](https://github.com/ThereseHagwall/backendFiskeLycka.git)
 
 ## Project Structure
 
