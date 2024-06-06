@@ -1,6 +1,6 @@
 # FiskeLycka Backend
 
-This is the backend repository for FiskeLycka, a mobile app for fishing enthusiasts. The backend is written with Next.js and hosted on Netlify.
+This is the backend repository for [FiskeLycka.](https://github.com/AnnebladFelix/FiskeLycka), a mobile app for fishing enthusiasts. The backend is written with Next.js and hosted on Netlify.
 
 ## Project Structure
 
