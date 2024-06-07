@@ -13,6 +13,18 @@ To clone this repository, follow these steps:
 ```bash
 git clone https://github.com/ThereseHagwall/backendFiskeLycka.git
 ```
+After you’ve cloned the repository, you can navigate into the project directory using the command:
+
+`cd <repository-name>`
+
+Replace <repository-name> with the name of the repository. Once you’re in the project directory, you can open the project in your preferred code editor to view the code and make changes.
+
+Since the project is hosted on Netlify, you don’t need to start the server locally. However, if you want to test changes locally, you’ll need to install the project dependencies and start the development server. This can usually be done with the following commands:
+```bash
+npm install
+npm run dev
+```
+Please note that these commands assume that you have Node.js and npm installed on your machine. If you don’t, you’ll need to install them first. You can download Node.js and npm from the official Node.js website.
 
 ## Project Structure
 
