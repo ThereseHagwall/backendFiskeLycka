@@ -15,7 +15,9 @@ git clone https://github.com/ThereseHagwall/backendFiskeLycka.git
 ```
 After you’ve cloned the repository, you can navigate into the project directory using the command:
 
-`cd <repository-name>`
+```bash 
+cd backenFiskeLycka
+```
 
 Replace <repository-name> with the name of the repository. Once you’re in the project directory, you can open the project in your preferred code editor to view the code and make changes.
 
