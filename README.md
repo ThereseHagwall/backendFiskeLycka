@@ -26,7 +26,7 @@ Since the project is hosted on Netlify, you don’t need to start the server loc
 npm install
 npm run dev
 ```
-Please note that these commands assume that you have Node.js installed on your machine. If you don’t, you’ll need to install it first. You can download Node.js official Node.js website.
+Please note that these commands assume that you have Node.js installed on your machine. If you don’t, you’ll need to install it first. You can download Node.js on the official Node.js website.
 
 ## Project Structure
 
