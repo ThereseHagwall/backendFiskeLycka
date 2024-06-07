@@ -19,7 +19,7 @@ After you’ve cloned the repository, you can navigate into the project director
 cd backenFiskeLycka
 ```
 
-Replace <repository-name> with the name of the repository. Once you’re in the project directory, you can open the project in your preferred code editor to view the code and make changes.
+Once you’re in the project directory, you can open the project in your preferred code editor to view the code and make changes.
 
 Since the project is hosted on Netlify, you don’t need to start the server locally. However, if you want to test changes locally, you’ll need to install the project dependencies and start the development server. This can usually be done with the following commands:
 ```bash
